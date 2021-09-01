@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  min-height: 100vh;
+  background-color: #fafafa;
+  color: #a3a5ae;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+}
+
+.container .intro-container {
+  text-align: center;
+  max-width: 350px;
+  margin: 60px 0;
+  font-size: 1.1rem;
+}
+
+.container .intro-container .intro-heading {
+  font-size: 1.7em;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.container .intro-container .intro-heading span {
+  display: block;
+  font-weight: 600;
+  color: #4c4e61;
+}
+
+.container .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.container .card-container .grid-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.container .card-container .card {
+  border-top: 5px solid var(--card-color);
+  padding: 30px;
+  max-width: 350px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card-container .card.card-supervisor {
+  --card-color: hsl(180, 62%, 55%);
+}
+
+.container .card-container .card.card-team-builder {
+  --card-color: hsl(0, 78%, 62%);
+}
+
+.container .card-container .card.card-karma {
+  --card-color: hsl(34, 97%, 64%);
+}
+
+.container .card-container .card.card-calculator {
+  --card-color: hsl(212, 86%, 64%);
+}
+
+.container .card-container .card .card-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4c4e61;
+}
+
+.container .card-container .card .card-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  margin-top: 50px;
+}
+
+.container footer {
+  margin-top: 50px;
+}
+
+@media (min-width: 700px) {
+  .container {
+    padding: 0 30px;
+  }
+  .container .intro-container {
+    max-width: 500px;
+  }
+  .container .intro-container .intro-heading {
+    font-size: 2.2em;
+  }
+  .container .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

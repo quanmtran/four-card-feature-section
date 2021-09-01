@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+$card-max-width: 350px;
+$card-gap: 30px;
+$dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$light-gray: hsl(0, 0%, 98%);
+
+@mixin flexbox($direction, $justify, $align, $gap) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+	gap: $gap;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 15px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	@include flexbox(row, center, center, 0);
+	min-height: 100vh;
+	background-color: $light-gray;
+	color: $grayish-blue;
+}
+
+.container {
+	@include flexbox(column, center, center, 0);
+
+	.intro-container {
+		text-align: center;
+		max-width: $card-max-width;
+		margin: 60px 0;
+		font-size: 1.1rem;
+
+		.intro-heading {
+			font-size: 1.7em;
+			font-weight: 200;
+			margin-bottom: 20px;
+
+			span {
+				display: block;
+				font-weight: 600;
+				color: $dark-blue;
+			}
+		}
+	}
+
+	.card-container {
+		@include flexbox(column, center, center, $card-gap);
+
+		.grid-center {
+			@include flexbox(column, center, center, $card-gap);
+		}
+
+		.card {
+			border-top: 5px solid var(--card-color);
+			padding: 30px;
+			max-width: $card-max-width;
+			border-radius: 5px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+			&.card-supervisor {
+				--card-color: hsl(180, 62%, 55%);
+			}
+
+			&.card-team-builder {
+				--card-color: hsl(0, 78%, 62%);
+			}
+
+			&.card-karma {
+				--card-color: hsl(34, 97%, 64%);
+			}
+
+			&.card-calculator {
+				--card-color: hsl(212, 86%, 64%);
+			}
+
+			.card-heading {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: $dark-blue;
+			}
+
+			.card-img {
+				@include flexbox(row, flex-end, center, 0);
+				margin-top: 50px;
+			}
+		}
+	}
+
+	footer {
+		margin-top: 50px;
+	}
+}
+
+@media (min-width: 700px) {
+	.container {
+		padding: 0 $card-gap;
+		.intro-container {
+			max-width: 500px;
+
+			.intro-heading {
+				font-size: 2.2em;
+			}
+		}
+
+		.card-container {
+			@include flexbox(row, center, center, $card-gap);
+		}
+	}
+}
